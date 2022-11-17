@@ -68,4 +68,8 @@ Ez az osztály kezeli az összes fájlba írást és fájlból olvasást, több 
   * a metódus megnyitja a budget.xml dokumentumot, hogy onnan beolvassa a tervezett költekezések mennyiségét, hogy az vissza küldött float típusú adatot számolásokhoz használhassuk.
 
 * public void updateBudget(float updatedBudget)
-  * a metódus
+  * a metódus az increaseBudget request során kerül elő, egész egyszerűen megnyitja a budget.xml dokumentumot, majd annak tartalmát megváltoztatja az updatelt összegre.
+
+***ModelBusiness***
+
+Ez 
