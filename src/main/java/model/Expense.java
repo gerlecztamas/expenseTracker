@@ -51,8 +51,6 @@ public class Expense implements AmountInterface {
         Fio reader  = new Fio();
         
         this.amount = amount;
-        System.out.println("helobello amount vagyok" + amount);
-        System.out.println("helobello budget vagyok" + reader.readBudget());
         return amount/reader.readBudget();
     }
 }

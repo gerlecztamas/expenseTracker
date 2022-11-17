@@ -75,14 +75,10 @@ public class ModelBusiness {
     
     public static JSONObject addExpense(JSONObject expense){
         JSONObject result = new JSONObject();
-        
-        
         if(expenseCheck(expense)){
             result.put("msg", "This expense has already been entered");
             return result;
         }
-        
-        
         result.put("msg", "The expense has been added to the database");
         return result;
     }
