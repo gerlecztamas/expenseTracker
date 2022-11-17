@@ -1,35 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><root>
+    <expense><name>Hamburger at Wendy's</name><category>FOOD</category><amount>5000.0</amount></expense>
     <expense>
-        <name>lajos</name>
-        <category>FOOD</category>
-        <date>2022-02-01</date>
-        <amount>1000.0</amount>
+        <name>new New Balance shoes</name>
+        <category>CLOTHING</category>
+        <amount>5000.0</amount>
     </expense>
-    
-<expense><name>lajoska</name><category>FOOD</category><date>2022-02-02</date><amount>10000.0</amount></expense>
-<expense><name>asd</name><category>CLOTHING</category><date>2022-02-04</date><amount>7000.0</amount></expense>
-<expense>
-    <name>new shoes</name>
-    <category>CLOTHING</category>
-    <date>2021-06-21</date>
-    <amount>5.0</amount>
-</expense>
-<expense>
-    <name>new hoes</name>
-    <category>OTHER</category>
-    <date>2021-04-22</date>
-    <amount>5.0</amount>
-</expense>
-<expense>
-    <name>friend</name>
-    <category>OTHER</category>
-    <date>2022-09-01</date>
-    <amount>500.0</amount>
-</expense>
-<expense>
-    <name>valami</name>
-    <category>HOUSING</category>
-    <date>2022-01-14</date>
-    <amount>200.0</amount>
-</expense>
+    <expense>
+        <name>Snacks</name>
+        <category>FOOD</category>
+        <amount>300.0</amount>
+    </expense>
+    <expense>
+        <name>Chips</name>
+        <category>FOOD</category>
+        <amount>400.0</amount>
+    </expense>
 </root>

@@ -5,8 +5,6 @@
  */
 package model;
 
-import java.time.LocalDate;
-
 /**
  *
  * @author Gerlecz Tamás
@@ -14,16 +12,14 @@ import java.time.LocalDate;
 public class Expense implements AmountInterface {
     private String name;
     private CategoryEnum category;
-    private LocalDate date;
     private float amount;
 
     public Expense() {
     }
 
-    public Expense(String name, CategoryEnum category, LocalDate date, float amount) {
+    public Expense(String name, CategoryEnum category, float amount) {
         this.name = name;
         this.category = category;
-        this.date = date;
         this.amount = amount;
     }
 
@@ -35,10 +31,6 @@ public class Expense implements AmountInterface {
         return category;
     }
 
-    public LocalDate getDate() {
-        return date;
-    }
-
     public float getAmount() {
         return amount;
     }
@@ -47,9 +39,7 @@ public class Expense implements AmountInterface {
 
     @Override
     public float amountOfExpense(float amount) {
-        //hány százaléka az adott expense az összesnek
         Fio reader  = new Fio();
-        
         this.amount = amount;
         return amount/reader.readBudget();
     }

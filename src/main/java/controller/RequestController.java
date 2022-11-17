@@ -40,9 +40,9 @@ public class RequestController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response addExpense(String bodycontent){
-        JSONObject expense = new JSONObject(bodycontent);
+        //JSONObject expense = new JSONObject(bodycontent);
         return Response
-                .ok(ModelBusiness.addExpense(expense)
+                .ok(ModelBusiness.addExpense(bodycontent)
                     .toString())
                 .build();
     }

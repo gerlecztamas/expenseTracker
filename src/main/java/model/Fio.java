@@ -43,12 +43,10 @@ public class Fio {
                 
                     String name = el.getElementsByTagName("name").item(0).getTextContent();
                     String category = el.getElementsByTagName("category").item(0).getTextContent();
-                    String date = el.getElementsByTagName("date").item(0).getTextContent();
                     String amount = el.getElementsByTagName("amount").item(0).getTextContent();
                     
                     expense.put("name", name);
                     expense.put("category", category);
-                    expense.put("date", date);
                     expense.put("amount", amount);
                     
                 expenses.put(expense);
@@ -77,17 +75,14 @@ public class Fio {
             
             Element name = doc.createElement("name");
             Element category = doc.createElement("category");
-            Element date = doc.createElement("date");
             Element amount = doc.createElement("amount");
             
             name.setTextContent(newExpense.getName());
             category.setTextContent(newExpense.getCategory().toString());
-            date.setTextContent(newExpense.getDate().toString());
             amount.setTextContent(Float.toString(newExpense.getAmount()));
             
             expense.appendChild(name);
             expense.appendChild(category);
-            expense.appendChild(date);
             expense.appendChild(amount);
             
             TransformerFactory tf = TransformerFactory.newInstance();
