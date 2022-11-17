@@ -28,6 +28,7 @@ Ez a package összesen egyetlen osztályt, a RequestController-t tartalmaz, ahol
 
 * increaseBudget
   * **POST** metódus, célja, hogy növeljük a budget.xml-ben tárolt tervezett havi keretet, a request bodyból kapott megfelelő JSON formátumú Stringet továbbítja a Model réteg megfelelő feldolgozó metódusának és szintén JSON formátumban küld választ a felhasználónak az eredményéről.
+-----
 
 **Model**
 
@@ -85,7 +86,7 @@ Ez az osztály tartalmazza a legtöbb requesthez szükséges business logikát/m
 
 * public static JSONObject addExpense(JSONObject expense)
   * a metódus a requestbody-ban tárolt JSONObjectet kapja meg String formátumban, ha nem megfelelő JSON formátumban van akkor hibaüzenetet küld vissza, ha megfelelő akkor odaadja az az expenseCheck metódusnak, amely leellenőrzi a Fio osztály metódusai segítségével, hogy szerepel-e már az adat az adatok között és ha nem akkor hozzáadja azt az expenses.xml fájlhoz és ennek a segítő metódus eredményétől függően küld vissza a metódus egy megfelelő JSON típúsú választ.
-
+-----
 
 **XML dokumentumok**
 
