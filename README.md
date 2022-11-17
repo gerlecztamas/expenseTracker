@@ -32,3 +32,40 @@ Ez a package összesen egyetlen osztályt, a RequestController-t tartalmaz, ahol
 **Model**
 
 Ez a package tartalmazza az összes olyan osztályt és metódust melyek az adatok változtatásához és a Controller réteg által küldött kérések kiszolgálásához szükséges.
+
+***Expense***
+
+Ez az úgymond fő entitásosztály, amely meghatározza milyen adatokat tárolunk, az AmountInterface-t implementálja ami egy metódust ad az osztálynak, amely segítségével kiszámolható az adott költekezés mekkora része a tervezett költekezéseinknek. Ezekhez mind tartoznak a szükséges getterek is.
+
+Attribútumai:
+* String name - az adott költekezés neve
+* CategoryEnum category - az adott költekezés kategóriája
+* Float amount - az adott költekezés mennyisége
+
+***CategoryEnum***
+
+Az Expense osztály enumja, ahol definiálva vannak a költekezések ketgóriái.
+
+Értékei:
+* FOOD
+* HEALTH
+* CLOTHING
+* HOUSING
+* TRANSPORTATION
+* OTHER
+
+***Fio***
+
+Ez az osztály kezeli az összes fájlba írást és fájlból olvasást, több helyen is használatban áll a programon belül. A metódusai a következők:
+
+* public JSONArray read()
+  * a metódus megnyitja az expenses.xml dokumentumot, azt megfelelően kezeli, parseolja, majd a fájl minden egyes expense elementjéből egy JSONObjectet készít, amelyeket egy JSONArraybe pakolja és ezt is küldi vissza. A metódust például a getExpenses request közvetlenül használja, de több helyen is használatban van.
+
+* public void write(Expense newExpense)
+  * a metódus egy Expense osztályú objektumot kap paraméterül, a feladata, hogy ezt megfelelő xml formátumba alakítsa és hozzáadja az expense.xml-ben tárolt adatokhoz.
+
+* public float readBudget()
+  * a metódus megnyitja a budget.xml dokumentumot, hogy onnan beolvassa a tervezett költekezések mennyiségét, hogy az vissza küldött float típusú adatot számolásokhoz használhassuk.
+
+* public void updateBudget(float updatedBudget)
+  * a metódus
