@@ -72,4 +72,16 @@ Ez az osztály kezeli az összes fájlba írást és fájlból olvasást, több 
 
 ***ModelBusiness***
 
-Ez 
+Ez az osztály tartalmazza a legtöbb requesthez szükséges business logikát/metódust. A Fio osztály xml manipulációs függvényeit is használja.
+
+* public static JSONArray getExpense(String name)
+  * a metódus a request által lekért expense nevét kapja paraméterként, végignézi a Fio osztály segítségével beolvasott adatainkat és ha azok között szerepel, akkor az objektumot belerakja egy JSONObjectbe majd azt a vissza küldésre váró JSONArraybe, emellé társít egy sikert jelző JSONObject üzenetet is, ha hibás nevet ad meg csupán az üzenet tér vissza azzal, hogy a folyamat sikertelen volt.
+
+* public static JSONArray getExpensesByCategory(String category)
+  * a metódus a request által lekért category nevét kapja paraméterként végignézi a Fio osztály segítségével beolvasott adatainkat majd az egyező kategóriájú adatokat egy JSONArraybe teszi, ezt hozzáadja egy újabb JSONArrayhez és társít mellé egy üzenetet amelyben feltünteti az adott kategória a tervezett költségeink mekkora része. Ha hibás kategóriát ad meg a felhasználó akkor ez csak a hibát jelzö üzenetet fogja tartalmazni.
+ 
+* public static JSONObject increaseBudget(String bodycontent)
+  * a metódus a requestbody-ban tárolt JSONObjectet kapja meg String formátumban, kiszámolja a Fió osztály metódusainak segítségével az új budget mennyiségét majd átírja azt a budget.xml fájlban. A metódus a sikeres változtatás üzenetét küldi vissza. Ha nem megfelelő formátumú JSONObject van a request body-ban akkor pedig az ennek megfelelő üzenetet.
+
+* public static JSONObject addExpense(JSONObject expense)
+  * 
