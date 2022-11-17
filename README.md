@@ -84,4 +84,6 @@ Ez az osztály tartalmazza a legtöbb requesthez szükséges business logikát/m
   * a metódus a requestbody-ban tárolt JSONObjectet kapja meg String formátumban, kiszámolja a Fió osztály metódusainak segítségével az új budget mennyiségét majd átírja azt a budget.xml fájlban. A metódus a sikeres változtatás üzenetét küldi vissza. Ha nem megfelelő formátumú JSONObject van a request body-ban akkor pedig az ennek megfelelő üzenetet.
 
 * public static JSONObject addExpense(JSONObject expense)
-  * 
+  * a metódus a requestbody-ban tárolt JSONObjectet kapja meg String formátumban, ha nem megfelelő JSON formátumban van akkor hibaüzenetet küld vissza, ha megfelelő akkor odaadja az az expenseCheck metódusnak, amely leellenőrzi a Fio osztály metódusai segítségével, hogy szerepel-e már az adat az adatok között és ha nem akkor hozzáadja azt az expenses.xml fájlhoz és ennek a segítő metódus eredményétől függően küld vissza a metódus egy megfelelő JSON típúsú választ.
+
+
